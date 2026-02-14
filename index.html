@@ -133,7 +133,50 @@ cursor:pointer;
 border-radius:5px;
 }
 .member{margin-top:10px;}
+
+
+/* ===== MOBILE FONT SIZE ONLY ===== */
+@media (max-width: 768px){
+
+header h1{
+font-size:18px;
+}
+
+.landing h2{
+font-size:22px;
+}
+
+.landing p{
+font-size:14px;
+line-height:1.6;
+}
+
+section h2{
+font-size:22px;
+}
+
+section h3{
+font-size:18px;
+}
+
+section p,
+section ul,
+section li{
+font-size:14px;
+}
+
+.btn{
+font-size:14px;
+}
+
+input,select{
+font-size:14px;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
@@ -144,13 +187,28 @@ border-radius:5px;
 
 <header>
 <img src="https://github.com/pprojectcentreee/web-host-/blob/main/Ellectra_w01wap.png?raw=true">
-<h1>WORKSHOP IOT</h1>
+<h1> IOT WORKSHOP</h1>
 </header>
 
 <div class="landing">
 <h2>Ellectra IoT Workshop 2026</h2>
+<h2>Work shop is conducted on 20.02.2026</h2>
 <button class="btn" onclick="showSection('about')">About the Workshop</button>
 <button class="btn" onclick="showSection('register')">Register</button>
+<p>
+An intensive Internet of Things (IoT) Workshop is to be conducted by Ellectra Company in collaboration with Node Nova, exclusively for the students of the EEE and ECE departments at Meenakshi Sundararajan Engineering College on Friday, 20.02.2026.
+
+The workshop aims to provide hands-on exposure to IoT technologies, embedded systems, and real-time applications. Participants will be introduced to the fundamentals of IoT architecture, sensor integration, microcontroller programming, cloud connectivity, and real-time data monitoring. The session will focus on bridging the gap between theoretical knowledge and practical implementation.
+</p>
+
+<div style="text-align: center; margin-top: 15px;">
+    <img src="https://github.com/pprojectcentreee/web-host-/blob/main/Ellectra_w01wap.png?raw=true" 
+         width="250" 
+         style="margin-right: 20px;">
+
+    <img src="https://github.com/pprojectcentreee/Workshop/blob/main/node%20nova.jpg?raw=true" 
+         width="250">
+</div>
 
 <div class="home-footer">
 © 2026 Ellectra | Certified IoT Workshop
@@ -212,6 +270,7 @@ wireless communication, cloud connectivity, and industrial safety standards.
 </section>
 
 <!-- REGISTER -->
+<!-- REGISTER -->
 <section id="register">
 <h2 style="color:#ffcc00;">Team Registration</h2>
 
@@ -233,6 +292,13 @@ wireless communication, cloud connectivity, and industrial safety standards.
 <option>Second Year</option>
 <option>Third Year</option>
 </select>
+
+<!-- NEW FIELDS ADDED -->
+<label>Email ID</label>
+<input type="email" name="email" placeholder="Team Contact Email" required>
+
+<label>Phone Number</label>
+<input type="tel" name="phone" placeholder="Team Contact Phone Number" required>
 
 <h3 style="color:#ffcc00;margin-top:15px;">Team Members (Min 3 – Max 5)</h3>
 
@@ -296,7 +362,7 @@ if(memberCount < 3){
 alert("Minimum 3 members required");
 return;
 }
-fetch("https://script.google.com/macros/s/AKfycbzdieSzaSjqXtMJNCsBepr-6t_jLDx0kmRxSt69uX2YRt4cu6wkBf7vzoWSmKMNPlol/exec",{
+fetch("https://script.google.com/macros/s/AKfycbwztguiaWyYDTyVIydl8Spjxi49c7tjNg8-X3efX90hHdagFjvC3fsi1YUyYZb4QhSa/exec",{
 method:"POST",
 body:new FormData(this)
 })
